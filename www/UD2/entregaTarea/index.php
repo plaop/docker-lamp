@@ -9,57 +9,27 @@
 <body>
 
 <!--header-->
-    <header class="bg-primary text-white text-center py-3">
-        <h1>UD2 - Paola Pirela</h1>
-        <p>Esta es una descripción de la Unidad 2</p>
-    </header>
-
-
- <!--menu-->
-     <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-        <div class="position-sticky">
-            <ul class="nav  flex-column">
-                <li class="nav-item">
-                    <a href="/index.php" class="nav-link">
-                        Home
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-        <div class="position-sticky">
-            <ul class="nav  flex-column">
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        Mis tareas
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-        <div class="position-sticky">
-            <ul class="nav  flex-column">
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        Nueva tarea
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+<?php include 'header.php'; ?>
+ 
+        <!--menu-->
+     
+        <div class="container-fluid">
+            <div class="row">  
+                <?php include 'menu.php'; ?>
+                    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h2>Esta es la página principal</h2>
+                        </div>
+                        <div class="container">
+                            <p>Y acá se supone que deba hablar brevemente de mi ... </p>
+                        </div>
+                    </main>
+            </div>
+        </div> 
+  
  <!--footer-->
-    <footer class="bg-dark text-white text-center py-3">
-    
-        <p class="small mb-0">&copy; <?php echo date('Y'); ?> Jenny Paola Pirela Urrea. Todos los derechos reservados.</p>
-    </footer>
+ <?php include 'footer.php'; ?> 
 
-    <!-- <?php include 'header.php'; ?>
-    <?php include 'menu.php'; ?>
-    <?php include 'footer.php'; ?> -->
+
 </body>
 </html>
