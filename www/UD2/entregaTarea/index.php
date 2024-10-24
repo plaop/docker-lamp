@@ -10,18 +10,23 @@
 
 <!--header-->
 <?php include 'header.php'; ?>
- 
-        <!--menu-->
      
         <div class="container-fluid">
             <div class="row">  
-                <?php include 'menu.php'; ?>
+            
+            <!--menu-->   
+            <?php include 'menu.php'; ?>
+                    
+                <!-- Contenido principal -->
                     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h2>Esta es la página principal</h2>
                         </div>
                         <div class="container">
-                            <p>Y acá se supone que deba hablar brevemente de mi ... </p>
+                            <p>Mi nombre es Jenny Paola Pirela, me encanta la fotografía y andar en bicicleta. 
+                                <br>Bueno, también la lectura, tocar el piano y la guitarra.
+                                <br>Cocinar solía gustarme mucho y se me daba muy bien pero desde que soy madre dejé la cocina a un lado.
+                            </p>
                         </div>
                     </main>
             </div>
