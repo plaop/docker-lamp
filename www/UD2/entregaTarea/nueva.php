@@ -2,14 +2,16 @@
 
 include 'utils.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $descripcion = $_POST['descripcion'];
-    $estado = $_POST['estado'];
+// Obtener los datos del formulario usando el método POST
+$descripcion = $_POST['descripcion'] ?? '';
+$estado = $_POST['estado'] ?? 'pendiente'; 
 
-    if (guardarTarea($descripcion, $estado)) {
+    $id = count(getTareas()) + 1; 
+
+    if (guardarTarea($id, $descripcion, $estado)) {
         echo "Tarea guardada correctamente.";
     } else {
         echo "Error: Datos no válidos.";
     }
-}
+
 ?>
