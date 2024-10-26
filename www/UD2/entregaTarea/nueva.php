@@ -1,17 +1,18 @@
-<?php
-
+ <?php
+var_dump($_POST);
 include 'utils.php';
 
-// Obtener los datos del formulario usando el método POST
-$descripcion = $_POST['descripcion'] ?? '';
-$estado = $_POST['estado'] ?? 'pendiente'; 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $descripcion = $_POST['descripcion'];
+    $estado = $_POST['estado'];
 
-    $id = count(getTareas()) + 1; 
-
-    if (guardarTarea($id, $descripcion, $estado)) {
+    if (guardarTarea($descripcion, $estado)) {
         echo "Tarea guardada correctamente.";
     } else {
         echo "Error: Datos no válidos.";
+    } 
+} else {
+        header('Location: nuevaForm.php');
     }
 
-?>
+?> 
